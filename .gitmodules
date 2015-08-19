@@ -1,0 +1,3 @@
+[submodule "/home/maczone/Documents/GitHub/ComputerSetup/Nodejs"]
+	path = /home/maczone/Documents/GitHub/ComputerSetup/Nodejs
+	url = https://github.com/taaem/nodejs-linux-installer.git

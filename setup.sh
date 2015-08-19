@@ -17,7 +17,7 @@ sudo apt-get install -y keepassx dropbox
 sudo apt-get install skype
 
 # Install development
-sudo apt-get install gcc g++ alien git python ntfs-3g
+sudo apt-get install gcc g++ alien git python ntfs-3g pylint coffeescript
 
 # Install custom mouse setup packages
 sudo apt-get install -y xbindkeys
