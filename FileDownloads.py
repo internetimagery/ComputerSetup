@@ -1,6 +1,6 @@
 # Grab files online
 
-import urllib2
+from urllib.request import urlopen
 import json
 import os
 from downloader import download
@@ -13,16 +13,17 @@ if not os.path.isdir(dlDir):
 
 # Download github Atom editor latest
 try:
-    f = urllib2.urlopen("https://api.github.com/repos/atom/atom/releases/latest")
+    f = urlopen("https://api.github.com/repos/atom/atom/releases/latest")
     data = json.load(f)
     for asset in data["assets"]:
         if asset["name"].lower() == "atom-amd64.deb":
             url = asset["browser_download_url"]
-            th = Thread(target=download, args=[url, os.path.join(dlDir, "Atom.deb")])
-            th.start()
-            dlThreads.append(th)
-except ValueError, urllib2.HTTPError:
-    print "There was a problem resolving URL for ATOM editor."
+            download(url, os.path.join(dlDir, "Atom.deb"))
+            # th = Thread(target=download, args=[url, os.path.join(dlDir, "Atom.deb")])
+            # th.start()
+            # dlThreads.append(th)
+except (ValueError, urllib2.HTTPError):
+    print("There was a problem resolving URL for ATOM editor.")
 
 
 if dlThreads:

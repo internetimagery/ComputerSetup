@@ -9,5 +9,5 @@ def download(url, path):
         try:
             filename, headers = urlretrieve(url)
             move(filename, path)
-        except ContentTooShortError, IOError:
-            print "There was an error downloading %s." % basename(path)
+        except (ContentTooShortError, IOError):
+            print("There was an error downloading %s." % basename(path))
