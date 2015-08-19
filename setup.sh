@@ -4,8 +4,20 @@
 sudo apt-get update
 sudo apt-get upgrade
 
+# Install multimedia
+sudo apt-get install -y vlc audacity
+
 # Install graphics programs
-sudo apt-get install -y gimp gimp-plugin-registry krita blender
+sudo apt-get install -y gimp gimp-plugin-registry krita blender scribus
+
+# Install Utility
+sudo apt-get install -y keepassx dropbox
+
+# Install assorted
+sudo apt-get install skype
+
+# Install development
+sudo apt-get install gcc g++ alien git python ntfs-3g
 
 # Install custom mouse setup packages
 sudo apt-get install -y xbindkeys
