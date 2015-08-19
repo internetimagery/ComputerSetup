@@ -10,6 +10,12 @@ sudo apt-get install -y gimp gimp-plugin-registry krita blender
 # Install custom mouse setup packages
 sudo apt-get install -y xbindkeys
 
+# Install Kodi
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:team-xbmc/ppa
+sudo apt-get update
+sudo apt-get install kodi
+
 # Create folder for non-package downloads
 export DownloadDIR=$HOME/temp_download
 if [ ! -d $DownloadDIR ]; then
